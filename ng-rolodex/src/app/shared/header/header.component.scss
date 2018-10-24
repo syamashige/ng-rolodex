@@ -1,0 +1,18 @@
+#logo {
+    font-family: 'Diplomata', cursive;
+    font-size:24px;
+    margin-top: 20px;
+}
+
+ul {
+    margin-top: -20px;
+    display: flex;
+    justify-content: flex-end;
+    // z-index: -1;
+}
+
+li {
+    list-style-type: none;
+    display: inline-block;
+    margin-right: 15px;
+}
