@@ -4,9 +4,9 @@ exports.up = function(knex, Promise) {
         table.increments(); 
         table.string('name').notNullable();
         table.string('address').notNullable();
-        table.integer('mobile').default(null);
-        table.inteeger('work').default(null);
-        table.integer('home').default(null);
+        table.string('mobile').default(null);
+        table.string('work').default(null);
+        table.string('home').default(null);
         table.string('email').default(null);
         table.string('twitter').default(null);
         table.string('instagram').default(null);
