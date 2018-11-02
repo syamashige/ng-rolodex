@@ -4,6 +4,9 @@
   "scripts": {
     "ng": "ng",
     "start": "npm rebuild node-sass & ng serve --host 0.0.0.0 & npx nodemon ./server/server.js",
+    "migrate": "POSTGRES_HOST_NAME=localhost POSTGRES_CONTAINER_PORT=5432 npx knex migrate:latest",
+    "seed": "POSTGRES_HOST_NAME=localhost POSTGRES_CONTAINER_PORT=5432 npx knex seed:run",
+    "flushdb": "POSTGRES_HOST_NAME=localhost POSTGRES_CONTAINER_PORT=5432 npx knex migrate:rollback; POSTGRES_HOST_NAME=localhost POSTGRES_CONTAINER_PORT=5432 npx knex migrate:latest; POSTGRES_HOST_NAME=localhost POSTGRES_CONTAINER_PORT=5432 npx knex seed:run",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
