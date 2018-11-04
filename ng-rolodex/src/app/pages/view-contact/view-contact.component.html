@@ -1,3 +1,24 @@
-<div id="view-contact-container">
-    {{title}}
-</div>
+<!-- <div id='view-contact-container'> -->
+    <div *ngFor = 'let viewContacts of contacts' class='contact-container'>
+        <div class='contact-name'>
+            {{viewContacts.name}}
+        </div>
+        <div class='contact-info'>
+            <!-- Address: {{viewContacts.address}}
+            <br/> -->
+            Mobile:  {{viewContacts.mobile}}
+            <br/>
+            <!-- Work:  {{viewContacts.work}}
+            <br/>
+            Home:  {{viewContacts.home}}
+            <br/> -->
+            Email:  {{viewContacts.email}}
+            <!-- <br/>
+            Twitter:  {{viewContacts.twitter}}
+            <br/>
+            Instagram:  {{viewContacts.instagram}}
+            <br/>
+            Github:  {{viewContacts.github}} -->
+        </div>
+    </div>
+<!-- </div> -->

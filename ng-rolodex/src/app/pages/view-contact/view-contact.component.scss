@@ -1,0 +1,30 @@
+.contact-container {
+    display: block;
+    margin: auto;
+    width: 80%;
+}
+
+.contact-name {
+    text-align: center;
+    color: grey;
+    border-top: 1px solid grey;
+    border-left: 1px solid grey;
+    border-right: 1px solid grey;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    box-shadow: 5px 1px lightgrey;
+    height: 3%;
+    width: 20%;
+    margin: 2% 2% 0 2%;
+    padding: 1%;
+}
+
+.contact-info {
+    color: grey;
+    margin: 0 2% 2% 2%;
+    padding: 2%;
+    height: 10%;
+    // width: 80%;
+    border: 1px solid grey;
+    display: block;
+}
