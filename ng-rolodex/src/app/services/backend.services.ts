@@ -6,7 +6,7 @@ import { HttpClient } from '@angular/common/http';
 })
 
 export class BackendService {
-    baseUrl: string = 'http://localhost:9000';
+    baseUrl: string = 'http://18.223.166.62:9000';
 
     contacts: any[] = [];
 
