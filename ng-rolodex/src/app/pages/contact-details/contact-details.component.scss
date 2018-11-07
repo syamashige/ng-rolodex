@@ -5,12 +5,9 @@
     width: 80%;
     display: flex;
     flex: row wrap;
-
 }
 
 .contact-name {
-    // display: flex;
-    // align-self: center;
     text-align: center;
     position: relative;
     padding: 1.5%;
@@ -44,11 +41,11 @@
 }
 
 .contact-info {
+    text-align: center;
     padding: 1.5%;
     width: 75%;
     height: 50%;
     background-color: white;
-    // margin: auto;
     border-radius: 25px;
     margin:5%;
 }

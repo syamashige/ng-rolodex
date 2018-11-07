@@ -60,8 +60,8 @@ export class CreateContactComponent {
         })
     }
 
-    submit() {
-        console.log(this.formData);
-    }
+    // submit() {
+    //     console.log(this.formData);
+    // }
     
 }
