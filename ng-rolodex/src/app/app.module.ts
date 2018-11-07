@@ -14,6 +14,7 @@ import { ProfileComponent } from './pages/profile/profile.component';
 import { LoginComponent } from './pages/login/login.component';
 
 import { BackendService } from './services/backend.services';
+import { EditContactComponent } from './pages/edit-contact/edit-contact.component';
 
                                                                       
 
@@ -28,6 +29,7 @@ import { BackendService } from './services/backend.services';
     ProfileComponent,
     LoginComponent,
     ContactDetailsComponent,
+    EditContactComponent,
   ],
   imports: [
     BrowserModule,

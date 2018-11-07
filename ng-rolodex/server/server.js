@@ -104,6 +104,49 @@ app.post('/contacts/new', (req, res) => {
         });
 })
 
+// GET - Edit form by id
+// app.get('/contacts/:id/edit', (req, res) => {
+//     const { id } = req.params;
+
+//     Contacts 
+//         .where({ id })
+//         .fetch()
+//         .then(results => {
+//             res.json(results);
+    
+//     })
+// })
+
+// PUT - Edit contact by id
+app.put('/contacts/:id', (req, res) => {
+    const { id } = req.params;
+    
+    const payload = {
+        name: req.body.name,
+        address: req.body.address,
+        mobile: req.body.mobile,
+        work: req.body.work,
+        home: req.body.home,
+        email: req.body.email,
+        twitter: req.body.twitter,
+        instagram: req.body.instagram,
+        github: req.body.github
+    }
+
+    Contacts
+        .where({ id })
+        .fetch()
+        .then(resutls => {
+        return results.save(payload)
+        })
+        .then(results => {
+        res.redirect(`/contacts/${id}`)
+        })
+        .catch(err => {
+            res.json(err);
+    })
+})
+
 
 
 
