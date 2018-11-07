@@ -63,10 +63,12 @@ app.get('/contacts', (req, res) => {
 
 //GET contacts by id
 app.get('/contacts/:id', (req, res) => {
+
     const { id } = req.params;
+    console.log('uuugggghhh', id)
     Contacts
         .where({ id })
-        .fetchAll()
+        .fetch()
         .then(results => {
             console.log('contacts by id results: ', results)
             res.json(results);
@@ -76,6 +78,31 @@ app.get('/contacts/:id', (req, res) => {
     })
 })
 
+//Create new contact 
+app.post('/contacts/new', (req, res) => {
+    const { id } = req.params;
+    const payload = {
+        name: req.body.name,
+        address: req.body.address,
+        mobile: req.body.mobile,
+        work: req.body.work,
+        home: req.body.home,
+        email: req.body.email,
+        twitter: req.body.twitter,
+        instagram: req.body.instagram,
+        github: req.body.github
+    }
+
+    Contacts
+        .forge(payload)
+        .save()
+        .then(result => {
+            res.redirect('/contacts');
+        })
+        .catch(err => {
+            res.json(err);
+        });
+})
 
 
 

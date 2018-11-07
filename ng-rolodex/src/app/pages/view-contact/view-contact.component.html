@@ -1,7 +1,7 @@
 <!-- <div id='view-contact-container'> -->
     <div *ngFor = 'let viewContacts of contacts' class='contact-container'>
         <div class='contact-name'>
-            <a routerLink="/contacs/:id">
+            <a routerLink='/contact-details/' (click)="getId(viewContacts.id)">
                 {{viewContacts.name}}
             </a>
         </div>

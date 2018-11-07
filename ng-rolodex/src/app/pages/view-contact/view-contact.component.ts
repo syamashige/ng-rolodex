@@ -12,13 +12,21 @@ export class ViewContactComponent implements OnInit {
 
     contacts: any;
 
+    id: any;
+
     constructor(private backend: BackendService) {
 
             
     }
 
+    getId(id) {
+        this.id = id;
+        this.backend.storeId(this.id);
+    }
+
     ngOnInit() {
         this.contacts = this.backend.contacts;
+        // this.backend.addContact(this.contacts)
         this.backend.getContacts() 
             .then(data => {
                 console.log(data)
